@@ -1,2 +1,24 @@
 #!/bin/bash
-python3 -m compileall -b "$PYFILE"
+
+if [ -z "$PYFILE" ]; then
+  echo "Error: PYFILE environment variable not set."
+  exit 1
+fi
+
+if [ ! -f "$PYFILE" ]; then
+  echo "Error: Python file '$PYFILE' not found."
+  exit 1
+fi
+
+BASENAME=$(basename "$PYFILE" .py)
+
+OUTPUT_FILE="$BASENAME.pyc"
+
+python -m py_compile "$PYFILE"
+
+if [ $? -eq 0 ]; then
+  echo "Compilation successful. Output filename: $OUTPUT_FILE"
+else
+  echo "Error: Compilation failed."
+  exit 1
+fi
