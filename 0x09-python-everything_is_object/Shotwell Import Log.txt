@@ -1,0 +1,9 @@
+Import Results Report (Shotwell 0.30.17 @ 2023-06-04T14:38:24.141873Z)
+
+Attempted to import 10 files. Of these, 9 files were successfully imported.
+
+Duplicate Photos/Videos Not Imported:
+
+/home/hacker101/Downloads/Hacker Wallpaper 4K Hd For Mobile Trick (1).png duplicates existing media item
+	/home/hacker101/Downloads/Hacker Wallpaper 4K Hd For Mobile Trick.png
+
